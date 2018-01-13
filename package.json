@@ -1,26 +1,21 @@
 {
-  "name": "rx",
+  "name": "rxjs-projekt",
   "version": "1.0.0",
-  "description": "Mastering RxJS",
+  "description": "Mastering rxJS",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "temporary": "node main.js",
-    "start": "webpack-dev-server --watch -inline",
+    "start": "webpack-dev-server --watch --inline",
     "postinstall": "typings install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rade1234/Rx.git"
-  },
-  "author": "Radek",
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "Pawel Konior",
   "license": "Beerware",
-  "bugs": {
-    "url": "https://github.com/rade1234/Rx/issues"
-  },
-  "homepage": "https://github.com/rade1234/Rx#readme",
   "dependencies": {
-    "rxjs": "^5.5.6"
+    "rxjs-es": "^5.0.0-beta.12"
   },
   "devDependencies": {
     "ts-loader": "^0.8.2",

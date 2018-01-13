@@ -6,8 +6,85 @@
 </head>
 <body>
 
+<h1>RxJS</h1>
 
 <script>
+
+    // tab.join('-');
+    // tab.split('-');
+    // 1. iterujemy po tablicy głównej, żęby dostać się do elementów
+    // 2. elementy są tablicami, więc je odwracamy funkcją reverse()
+
+    const t = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
+    const t2 = t.map(e => e.reverse().join('-')).join('-')
+    const t3 = t.map(function (e) {
+        return e.reverse().join('-');
+    }).join('-');
+
+    const tab = [
+        {name: 'Pawel', age: 32},
+        {name: 'Karol', age: 17},
+        {name: 'Tomek', age: 67},
+        {name: 'Kasia', age: 12},
+        {name: 'Ania', age: 4},
+        {name: 'Roman', age: 2},
+    ]
+
+    const c = tab.filter((e) => e.age >= 18);
+    const c2 = tab.filter((e) => e.age < 18).map((e) => e.name);
+
+    const tab2 = [
+        {
+            name: 'Pawel', age: 32, favorites: [
+                'rybki', 'programowanie', 'alkohol'
+            ]
+        },
+        {
+            name: 'Karol', age: 17, favorites: [
+                'matematyka', 'grzybki', 'alkohol'
+            ]
+        },
+        {
+            name: 'Tomek', age: 67, favorites: [
+                'filmy', 'napady', 'narkotyki'
+            ]
+        },
+        {
+            name: 'Kasia', age: 12, favorites: [
+                'koty', 'gry', 'alkohol'
+            ]
+        },
+        {
+            name: 'Ania', age: 4, favorites: [
+                'rybki', 'koty', 'wolnomularstwo'
+            ]
+        },
+        {
+            name: 'Roman', age: 2, favorites: [
+                'roboty', 'niespanie', 'prace'
+            ]
+        },
+    ];
+
+    // 1. iterowanie po wszystkich obiektach map
+    // 2. wejsc do favorites, czyli sprawdzić który element jest tablicą
+    // 3. przefiltrować tablicę w poszukiwaniu alkoholu
+    // 4. jeżeli zawiera to zwrócić imię z obiektu
+
+    const c3 = tab2.map(function (e) {
+        console.log('element t2', e)
+        let temp = e.favorites.filter(function (element) {
+            return element === 'alkohol';
+        });
+        return temp.length > 0 ? e.name : -1;
+    }).filter(function (e) {
+        return e !== -1;
+    });
+
+    const c4 = tab2.map(e => {
+        let temp = e.favorites.filter(e => e === 'alkohol');
+        return temp.length > 0 ? e.name : -1;
+    }).filter(e => e !== -1);
 
 </script>
 

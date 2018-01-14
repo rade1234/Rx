@@ -1,0 +1,27 @@
+{
+  "name": "rxjs-projekt",
+  "version": "1.0.0",
+  "description": "Mastering rxJS",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "temporary": "node main.js",
+    "start": "webpack-dev-server --watch --inline",
+    "postinstall": "typings install"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "Pawel Konior",
+  "license": "Beerware",
+  "dependencies": {
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "typings": "^2.1.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
